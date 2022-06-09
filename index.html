@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://use.typekit.net/siz6zun.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&display=swap">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="style.css">
+  <title>OrientaMentor</title>
+  <link rel="icon" href="assets/icon.png" type="image/x-icon">
+</head>
+
+<body>
+
+<div>
+
+<!-- Menù  -->
+
+<div id="menu">
+    
+  <div class="topBar">
+   <a href="#home2"><img src="assets/marchio.png"></a>
+   <img onclick="closeMenu()" src="assets/close-icon.png">
+  </div>
+  <div id="menuCont">
+  <a href="index.html"> <h2> Home </h2> </a>
+  <a href="scopri.html"> <h2> Scopri </h2> </a>
+  <a href="test.html" > <h2> Test </h2> </a>
+  <a href="index.html"> <h2> Login </h2> </a>
+</div>
+ </div>
+
+<!-- TOP BAR  -->
+
+<div class="topBar">
+ <a href="#home2"><img src="assets/marchio.png"></a>
+ <img  onclick="openMenu()" src="assets/menu-icon.png">
+</div>
+
+<div id="sfondo"> </div>
+
+  <!-- PRIMA SCHERMATA della Home  -->
+
+  <div class="schermata" id="home1"></div>
+
+
+  <!-- SECONDA SCHERMATA della Home  -->
+
+  <div class="schermata" id="home2">
+    <h1>Scegli il tuo futuro</h1>
+    <h3>  Orientamentor è l’app dove trovare suggerimenti personalizzati e contatti con Mentori. Scopri quale percorso fa per te!</h3>
+    <a href="test.html" ><button> Inizia il test </button></a>
+  </div>
+
+
+    <!-- TERZA SCHERMATA della Home  -->
+
+  <div class="schermata" id="home3">
+
+
+    <div id="slide1" class="slide">
+      <img src="assets/arrow-icon-black.png" onclick="scorrimentoSlide(3)" style="transform: rotate(90deg);">
+      <img src="assets/arrow-icon-black.png" onclick="scorrimentoSlide(2)"  style="right:0; transform: rotate(-90deg);">
+     <h2> Fatti guidare tra le professioni</h2>
+     <h3> Il test individuerà al meglio le carriere più adatte a te secondo le tue caratteristiche, attitudini ed aspirazioni</h3>
+     <a  href="scopri.html"><button> Scopri </button></a>
+     </div>
+
+
+    <div id="slide2" class="slide">
+      <img src="assets/arrow-icon-black.png" onclick="scorrimentoSlide(1)" style="transform: rotate(90deg);">
+      <img src="assets/arrow-icon-black.png" onclick="scorrimentoSlide(3)" style="right:0; transform: rotate(-90deg);">
+    <h2> Esplora percorsi personalizzati</h2>
+    <h3> Scopri ogni singola possibilità e naviga le varie diramazioni dei percorsi</h3>
+    <a  href="scopri.html"><button> Scopri </button></a>
+     </div>
+
+    <div id="slide3" class="slide">
+      <img src="assets/arrow-icon-black.png" onclick="scorrimentoSlide(2)" style="transform: rotate(90deg);">
+      <img src="assets/arrow-icon-black.png" onclick="scorrimentoSlide(1)" style="right:0; transform: rotate(-90deg);">
+      <h2> Lasciati ispirare da migliaia di mentori</h2>
+      <h3>Parla direttamente con gli esperti dei settori che ti interessano per schiarirti le idee sul tuo futuro  </h3>
+      <a  href="scopri.html"><button> Scopri </button></a>
+    </div>
+  </div>
+
+  <!-- QUARTA SCHERMATA della Home  -->
+
+<div class="schermata" id="home4">
+  <div id="video"> </div>
+</div>
+
+
+  <!-- QUINTA SCHERMATA della Home  -->
+
+<div class="schermata" id="home5">
+  <div class="schermataConFooterContainer">
+<h1> Scarica l’app</h1>
+<h3> Inizia ora ad esplorare il tuo futuro </h3>
+<button > App store </button>
+<button> Google Play </button>
+<button> versione browser </button>
+</div>
+
+<footer>
+  <div class="footerContainer">
+    <div class="flexRow">
+      <div>
+        <div> <b> OrientaMentor</b> </div>
+        <div> Home </div>
+        <div> Scopri </div>
+      </div>
+      <div class="sacrificabile">
+        <div > <b> Condizioni </b> </div>
+        <div> Privacy </div>
+        <div> </div>
+      </div>
+      <div>
+        <div> <b>Download App</b> </div>
+        <div> Iphone </div>
+        <div> Android </div>
+      </div>
+      <div>
+        <div><b> Contatti </b> </div>
+        <div> Supporto </div>
+        <div> info@orientamentor.com </div>
+      </div>
+    </div>
+    <div class="line"> </div>
+    <div> OrientaMentor Europe S.A. | Via Giuseppe Candiani, 30 20138 Milano | Società del gruppo OrientaMentor S.p.A </div>
+    <div> Ⓒ 2022 OrientaMentor. All Rights Reserved. </div>
+  </div>
+</footer>
+</div>
+
+</div>
+
+
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>

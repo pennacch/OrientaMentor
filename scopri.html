@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://use.typekit.net/siz6zun.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&display=swap">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="style.css">
+  <title>OrientaMentor</title>
+  <link rel="icon" href="assets/icon.png" type="image/x-icon">
+</head>
+
+<body>
+<div>
+  <div id="menu">
+    <div class="topBar">
+      <a href="#home2"><img src="assets/marchio.png"></a>
+      <img onclick="closeMenu()" src="assets/close-icon.png">
+    </div>
+    <div id="menuCont">
+      <a href="index.html">
+        <h2> Home </h2>
+      </a>
+      <a href="scopri.html">
+        <h2> Scopri </h2>
+      </a>
+      <a href="test.html">
+        <h2> Test </h2>
+      </a>
+      <a href="index.html">
+        <h2> Login </h2>
+      </a>
+    </div>
+  </div>
+
+  <!-- TOP BAR  -->
+
+  <div class="topBar">
+    <a href="#home2"><img src="assets/marchio.png"></a>
+    <img onclick="openMenu()" src="assets/menu-icon.png">
+  </div>
+
+  <div id="sfondo"> </div>
+
+  <!-- PRIMA SCHERMATA dello Scopri  -->
+
+  <div class="schermata" id="scopri1">
+    <h2> L’esperienza al servizio degli studenti </h2>
+    <h3> Attraverso contenuti personalizzati lo studente può orientarsi in modo semplice e pratico, chiedendo aiuto e consigli ai mentori </h3>
+  </div>
+
+
+  <div class="schermata" id="scopri2">
+    <div>
+      <img src="assets/studente.png">
+      <h3> Studenti </h3>
+      <h4> Tutti coloro che hanno bisogno di informazioni relative a percorsi di studio e lavorativi, e che cercano un confonto con professionisti del settore</h4>
+    </div>
+    <div>
+      <img src="assets/mentore.png">
+      <h3> Mentori</h3>
+      <h4> Professionisti volenterosi di aiutare e raccontare la loro professione ai giovani</h4>
+    </div>
+  </div>
+
+  <div class="schermata" id="scopri3">
+    <div> </div>
+    <ul>
+      <input type="radio" name="mockup1" id="m1f1" checked> <label for="m1f1"  onclick="mockupSelezione(1)"><h2> Funzionalità</h2> </label>
+      <input type="radio" name="mockup1" id="m1f2"> <label for="m1f2" onclick="mockupSelezione(2)"><h2> Funzionalità </h2></label>
+      <input type="radio" name="mockup1" id="m1f3"><label for="m1f3" onclick="mockupSelezione(3)"><h2> Funzionalità </h2></label>
+      <input type="radio" name="mockup1" id="m1f4"><label for="m1f4"  onclick="mockupSelezione(4)"> <h2>Funzionalità</h2> </label>
+      <input type="radio" name="mockup1" id="m1f5"> <label for="m1f5"  onclick="mockupSelezione(4)"> <h2>Funzionalità</h2> </label>
+  </ul>
+  </div>
+
+  <div class="schermata" id="scopri4">
+    <div> </div>
+    <ul>
+      <input type="radio" name="mockup2" id="m2f1" checked="checked"> <label for="m2f1"  onclick="mockupSelezione(1)"><h2> Funzionalità</h2> </label>
+      <input type="radio" name="mockup2" id="m2f2"> <label for="m2f2" onclick="mockupSelezione(2)"><h2> Funzionalità </h2></label>
+      <input type="radio" name="mockup2" id="m2f3"><label for="m2f3" onclick="mockupSelezione(3)"><h2> Funzionalità </h2></label>
+      <input type="radio" name="mockup2" id="m2f4"><label for="m2f4"  onclick="mockupSelezione(4)"> <h2>Funzionalità</h2> </label>
+      <input type="radio" name="mockup2" id="m2f5"> <label for="m2f5"  onclick="mockupSelezione(4)"> <h2>Funzionalità</h2> </label>
+  </ul>
+  </div>
+
+  <div class="schermata" id="scopri5">
+
+    <div class="schermataConFooterContainer">
+      <h1> Scarica l’app</h1>
+      <h3> Inizia ora ad esplorare il tuo futuro </h3>
+      <button> App store </button>
+      <button> Google Play </button>
+      <button> versione browser </button>
+    </div>
+
+    <footer>
+      <div class="footerContainer">
+        <div class="flexRow">
+          <div>
+            <div> <b> OrientaMentor</b> </div>
+            <div> Home </div>
+            <div> Scopri </div>
+          </div>
+          <div class="sacrificabile">
+            <div> <b> Condizioni </b> </div>
+            <div> Privacy </div>
+            <div> </div>
+          </div>
+          <div>
+            <div> <b>Download App</b> </div>
+            <div> Iphone </div>
+            <div> Android </div>
+          </div>
+          <div>
+            <div><b> Contatti </b> </div>
+            <div> Supporto </div>
+            <div> info@orientamentor.com </div>
+          </div>
+        </div>
+        <div class="line"> </div>
+        <div> OrientaMentor Europe S.A. | Via Giuseppe Candiani, 30 20138 Milano | Società del gruppo OrientaMentor S.p.A </div>
+        <div> Ⓒ 2022 OrientaMentor. All Rights Reserved. </div>
+      </div>
+    </footer>
+  </div>
+
+</div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
