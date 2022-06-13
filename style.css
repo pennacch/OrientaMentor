@@ -69,7 +69,13 @@ button {
   padding: 0.5em;
   padding-left: 1.5em;
   padding-right: 1.5em;
-  margin-top: 5vh
+  margin-top: 5vh;
+  transition:  all .2s ease-in-out;
+}
+
+button:hover{
+  transform: scale(110%);
+  cursor: pointer;
 }
 
 a {
@@ -104,7 +110,13 @@ a {
 }
 
 #menu h2 {
-  padding-top: 5vh
+  padding-top: 5vh;
+  transition:  all .2s ease-in-out;
+
+}
+
+#menu h2:hover {
+  transform: scale(110%);
 }
 
 #menuCont {
@@ -129,6 +141,7 @@ a {
 
 .topBar>* {
   margin: 1vw;
+  cursor: pointer;
 }
 
 /* impostazioni delle singole schermate --------------------------- */
@@ -201,6 +214,12 @@ a {
   position: absolute;
   margin: 1vw;
   top: 30vh;
+  transition:  all .2s ease-in-out;
+
+}
+
+#home3 img:hover {cursor:pointer;
+  transform: scale(110%);
 }
 
 #slide1 {
@@ -335,8 +354,11 @@ footer {
 #scopri3 div {
   width: 40vh;
   height: 90vh;
-  background-color: black;
+
   margin-left: 30vw;
+  background-image: url(assets/mockupCell1.png);
+  background-size: 40vh auto;
+  background-repeat: no-repeat;
 }
 #scopri3 h2  {
   line-height: 8vh;
@@ -356,12 +378,17 @@ footer {
 #scopri4 {
   display: flex; align-items: center;
 
+
+
+
 }
 
 #scopri4 div {
   width: 40vw;
-  height: 22vw;
-  background-color: black;
+  height: 26vw;
+  background: url(assets/mockupPc1.png);
+  background-repeat: no-repeat;
+  background-size: 40vw;
   margin-left: 20vw;
 }
 #scopri4 h2  {
@@ -405,7 +432,7 @@ footer {
 }
 
 #test1 button {
-  margin: 1vw;
+  margin: 2vw;
   margin-top: 7vh;
   margin-bottom: 10vh;
 }
@@ -435,7 +462,7 @@ footer{display: none;}
 .topBar img:first-child  {height: 8vh;}
 
 #home2 h1 {padding-top: 25vh;}
-#home2 h3 {margin-top: 5vh; max-width: 80vw;}
+#home2 h3 {margin-top: 2vh; max-width: 80vw;}
 #home2 {background-size: 150vw;}
 #home2 button {margin-top:2vh;}
 
@@ -460,24 +487,29 @@ footer{display: none;}
 
 #scopri2 {display: flex; flex-direction: column; align-items: center; justify-content: center;}
 #scopri2 *  {max-width: 80vw; margin-top: 1vh;}
-#scopri2 img{width: 50vw; height: 50vw;margin-top: 3vh;}
+#scopri2 img{width: 50vw; height: 50vw;margin-top: 0vh;}
 
 /*---------------------------------------------------------------*/
 
+#scopri3 {flex-direction: column; justify-content: center;}
 #scopri3 div {
- margin-left: 10vw;
+  background-size: 40vw;
+  margin-top: 5vh;
+ margin-left: 0vw;
  width: 40vw;
  height: 90vw;
 }
 
 #scopri3 ul {
-  margin-left: 5vw;
+  margin-top: 3vh;
+  margin-left: 0vw;
   padding:0px;
 }
 
 #scopri3 h2  {
-  line-height: 8vh;
-  height: 8vh;
+  text-align: center;
+  line-height: 6vh;
+  height: 6vh;
   font-family: "acumin-pro";
   font-size: 20px;
   transition: font-size 0.5s ease;
@@ -485,31 +517,37 @@ footer{display: none;}
 
 #scopri3 h2:hover {font-size: 25px}
 
-#scopri3 input[type="radio"]:checked + label {font-size: 30px}
+#scopri3 input:checked + label>h2 {font-size: 30px}
+
+
 /*-----------------------------------------------------------*/
 
 #scopri4{
   flex-direction: column;
-  align-items: flex-start;
+
   justify-content: center;
 }
 
+#scopri4 input:checked + label>h2 {font-size: 30px}
+
 #scopri4 div {
+  background-size: 80vw;
  width: 80vw;
- height: 45vw;
- margin-left: 10vw;
+ height: 50vw;
+ margin-left: 0vw;
  margin-bottom: 5vw;
 
 }
 
 #scopri4 ul {
-  margin-left: 10vw;
+  margin-left: 0vw;
   padding:0px;
 }
 
 
 
 #scopri4 h2  {
+  text-align: center;
   line-height: 5vh;
   height: 5vh;
   font-family: "acumin-pro";
@@ -533,9 +571,10 @@ footer{display: none;}
 #scopri5 button {margin-top:2vh; display: block;}
 
 /*sezione test ------------------------------------------------------------------ */
+#sfondoTest1 {background-size: 180vw; background-repeat: no-repeat; background-position: center bottom;}
 #test1 h2 {font-size: 32px; margin-bottom: 5vw; margin-left: 5vw; margin-right: 5vw;}
-#test1 div {flex-direction: column; align-items: center;}
-#test1 button{margin-top: 2vh;}
+#test1 button{margin-top: 2vh; margin-bottom: 0vh; font-size: 18px;}
+#contatore div {width: 3vw; height: 3vw; margin: 1px; margin-top: 8vh; }
 
 }
 
@@ -551,9 +590,9 @@ footer{display: none;}
   footer{display: none;}
 
 
-  .topBar>* {margin: 2vw}
-  .topBar>img {height: 4vh;}
-  .topBar img:first-child  {height: 8vh;}
+  .topBar>* {margin: 4vw}
+  .topBar>img {height: 3vh;}
+  .topBar img:first-child  {height: 6vh;}
 
 
   #home2 h3 {margin-top: 5vh; max-width: 80vw;}
@@ -574,7 +613,9 @@ footer{display: none;}
   #home5 button {margin-top:2vh; display: block;}
 
   /*sezione scopri ------------------------------------------------------------------ */
-  #scopri1 {background-size: 200vw; }
+  #scopri1 {background: url(assets/scopri1v2.png); background-size: 120vw; background-position: center bottom; background-repeat:no-repeat;
+  }
+
   #scopri1 h2 {padding-top: 15vh;}
   #scopri1 * {width: 80vw;}
 
@@ -585,20 +626,25 @@ footer{display: none;}
 
   /*---------------------------------------------------------------*/
 
+  #scopri3 {flex-direction: column; justify-content: center;}
   #scopri3 div {
-   margin-left: 10vw;
+    background-size: 40vw;
+    margin-top: 5vh;
+   margin-left: 0vw;
    width: 40vw;
    height: 90vw;
   }
 
   #scopri3 ul {
-    margin-left: 5vw;
+    margin-top: 3vh;
+    margin-left: 0vw;
     padding:0px;
   }
 
   #scopri3 h2  {
-    line-height: 8vh;
-    height: 8vh;
+    text-align: center;
+    line-height: 6vh;
+    height: 6vh;
     font-family: "acumin-pro";
     font-size: 20px;
     transition: font-size 0.5s ease;
@@ -606,31 +652,37 @@ footer{display: none;}
 
   #scopri3 h2:hover {font-size: 25px}
 
-  #scopri3 input[type="radio"]:checked + label {font-size: 30px}
+  #scopri3 input:checked + label>h2 {font-size: 30px}
+
+
   /*-----------------------------------------------------------*/
 
   #scopri4{
     flex-direction: column;
-    align-items: flex-start;
+
     justify-content: center;
   }
 
+  #scopri4 input:checked + label>h2 {font-size: 30px}
+
   #scopri4 div {
+    background-size: 80vw;
    width: 80vw;
-   height: 45vw;
-   margin-left: 10vw;
+   height: 50vw;
+   margin-left: 0vw;
    margin-bottom: 5vw;
 
   }
 
   #scopri4 ul {
-    margin-left: 10vw;
+    margin-left: 0vw;
     padding:0px;
   }
 
 
 
   #scopri4 h2  {
+    text-align: center;
     line-height: 5vh;
     height: 5vh;
     font-family: "acumin-pro";
@@ -639,9 +691,6 @@ footer{display: none;}
   }
 
   #scopri4 h2:hover {font-size: 25px}
-
-
-
 
 
 
@@ -654,9 +703,10 @@ footer{display: none;}
   #scopri5 button {margin-top:2vh; display: block;}
 
   /*sezione test ------------------------------------------------------------------ */
+  #sfondoTest1 {background-size: 180vw; background-repeat: no-repeat; background-position: center bottom;}
   #test1 h2 {font-size: 32px; margin-bottom: 5vw; margin-left: 5vw; margin-right: 5vw;}
-  #test1 div {flex-direction: column; align-items: center;}
-  #test1 button{margin-top: 2vh;}
+  #test1 button{margin-top: 2vh; margin-bottom: 0vh; font-size: 18px;}
+  #contatore div {width: 3vw; height: 3vw; margin: 1px; margin-top: 8vh; }
 
 
 }
@@ -672,10 +722,10 @@ footer{display: none;}
     button{font-size:22px;}
     footer{display: none;}
 
-
+    .topBar {margin-top: 1vh;}
     .topBar>* {margin: 2vw}
     .topBar>img {height: 4vh;}
-    .topBar img:first-child  {height: 8vh;}
+    .topBar img:first-child  {height: 7vh;}
 
     #home2 * {max-width: 80vw;}
     #home2 h1 {padding-top: 15vh;}
@@ -684,13 +734,13 @@ footer{display: none;}
     #home2 button {margin-top:3vh;}
 
     #home3 img {width: 10vw}
-    #home3 .slide * {margin-left: 10vw; max-width: 60vw;}
+    #home3 .slide * {margin-left: 10vw; max-width: 45vw;}
     #home3 .slide button {margin-left: 0px;}
     #home3 img {display: none;}
-    #home3 h2 {padding-top: 5vh;}
+    #home3 .slide h2 {padding-top: 5vh; max-width:70vw;}
     #home3 button {margin-top: 2vh;}
-    #home3 .slide {background-size: 200vw; background-position: bottom 0 right -30vw;}
-    #home3 .slide:last-child {background-position: bottom 0 right -45vw;}
+    #home3 .slide {background-size: 170vw; background-position: bottom 0 right -15vw;}
+    #home3 .slide:last-child {background-position: bottom 0 right -25vw;}
 
     #home5 {background-position:bottom 0 left 0;background-size: 200vw;}
     .schermataConFooterContainer{
@@ -701,22 +751,26 @@ footer{display: none;}
     #home5 button {margin-top:2vh; display: inline;}
 
     /*sezione scopri ------------------------------------------------------------------ */
-    #scopri1 {background-size: 200vw; }
+    #scopri1 {background: url(assets/scopri1v2.png); background-size: 100vw; background-position: bottom -10vh center; background-repeat: no-repeat;}
     #scopri1 h2 {padding-top: 15vh;}
     #scopri1 * {width: 80vw;}
 
 
     #scopri2 {display: flex; flex-direction: column; align-items: center; justify-content: center;}
     #scopri2 *  {max-width: 80vw; margin-top: 1vh;}
-    #scopri2 img{width: 50vw; height: 50vw;margin-top: 3vh;}
+    #scopri2 img{width: 50vw; height: 50vw;margin-top: -5vh;}
+    #scopri2 h4{font-size: 22px;}
 
     /*---------------------------------------------------------------*/
 
     #scopri3 div {
      margin-left: 10vw;
-     width: 40vw;
-     height: 90vw;
+     width: 50vw;
+     height: 100vw;
+     background-size: 50vw 100vw;
     }
+
+
 
     #scopri3 ul {
       margin-left: 5vw;
@@ -727,32 +781,35 @@ footer{display: none;}
       line-height: 8vh;
       height: 8vh;
       font-family: "acumin-pro";
-      font-size: 20px;
+      font-size: 22px;
       transition: font-size 0.5s ease;
     }
 
     #scopri3 h2:hover {font-size: 25px}
 
-    #scopri3 input[type="radio"]:checked + label {font-size: 30px}
+    #scopri3 input:checked + label>h2 {font-size: 30px}
     /*-----------------------------------------------------------*/
 
     #scopri4{
       flex-direction: column;
       align-items: flex-start;
       justify-content: center;
+      align-items: center;
     }
 
     #scopri4 div {
-     width: 80vw;
-     height: 45vw;
-     margin-left: 10vw;
-     margin-bottom: 5vw;
+     width: 90vw;
+     height: 60vw;
+     margin-top: 5vh;
+     margin-left: 0;
+
+     background-size: 90vw;
 
     }
 
     #scopri4 ul {
-      margin-left: 10vw;
       padding:0px;
+      margin-left: 0;
     }
 
 
@@ -761,11 +818,14 @@ footer{display: none;}
       line-height: 5vh;
       height: 5vh;
       font-family: "acumin-pro";
+      margin-left: 0;
       font-size: 20px;
       transition: font-size 0.5s ease;
+      text-align: center;
     }
 
     #scopri4 h2:hover {font-size: 25px}
+    #scopri4 input:checked + label>h2 {font-size: 30px}
 
 
 
@@ -782,15 +842,151 @@ footer{display: none;}
     #scopri5 button {margin-top:2vh; display: inline;}
 
     /*sezione test ------------------------------------------------------------------ */
-    #test1 h2 {font-size: 32px; margin-bottom: 5vw; margin-left: 5vw; margin-right: 5vw;}
-    #test1 div {flex-direction: column; align-items: center;}
-    #test1 button{margin-top: 2vh;}
+    #sfondoTest1 {background-size: 180vw; background-repeat: no-repeat; background-position: center bottom;}
+    #test1 h2 {font-size: 44px; margin-bottom: 5vw; margin-left: 5vw; margin-right: 5vw;}
+    #test1 button{margin-top: 2vh; margin-bottom: 0vh; font-size: 18px;}
+    #contatore div {width: 2vw; height: 2vw; margin: 5px; margin-top: 8vh; }
 
 
 }
 
   /* Viewport: Ipad Mini Landscape ( 1024 x 768 px ) */
-  @media only screen and (device-width: 1024px) and (device-height: 768px) {}
+  @media only screen and (device-width: 1024px) and (device-height: 768px) {
+
+        h1{font-size: 110px; line-height: 100%}
+        h2{font-size:72px;}
+        h3{font-size:24px;}
+        h4{font-size:12px;}
+        button{font-size:22px;}
+        footer{display: none;}
+
+        .topBar {margin-top: 1vh;}
+        .topBar>* {margin: 2vw}
+        .topBar>img {height: 4vh;}
+        .topBar img:first-child  {height: 7vh;}
+
+        #home2 * {max-width: 60vw;}
+        #home2 h1 {padding-top: 15vh;}
+        #home2 h3 {margin-top: 0vh;}
+        #home2 {background-size: 100vw;}
+        #home2 button {margin-top:3vh;}
+
+        #home3 img {width: 10vw}
+        #home3 .slide * {margin-left: 10vw; max-width: 45vw;}
+        #home3 .slide button {margin-left: 0px;}
+        #home3 img {display: none;}
+        #home3 .slide h2 {padding-top: 5vh; max-width:55vw;}
+        #home3 button {margin-top: 2vh;}
+        #home3 .slide {background-size: 130vw; background-position: bottom 0 right -15vw;}
+        #home3 .slide:last-child {background-position: bottom 0 right -25vw;}
+
+
+        #home5 {background-position:bottom 0 right -90vw;background-size: 150vw;}
+        .schermataConFooterContainer{
+          margin-left: 10vw;
+          margin-right: 30vw;
+          padding-top: 15vh;
+        }
+
+        #home5 button {margin-top:2vh; display: inline;}
+
+        /*sezione scopri ------------------------------------------------------------------ */
+        #scopri1 {background-size: auto 100vh; background-position: bottom center; background-repeat: no-repeat;}
+        #scopri1 h2 {padding-top: 15vh;}
+        #scopri1 * {width: 50vw; margin-left: 5vw}
+        #scopri1 h3 {width: 60vw;}
+
+
+        #scopri2 {display: flex; align-items:flex-start;; justify-content: space-around;}
+        #scopri2 *  {max-width: 40vw; margin-top: 1vh;}
+        #scopri2 img{width: 40vw; height: 40vw;margin-top: 10vh;}
+        #scopri2 h4{font-size: 16px;}
+
+        /*---------------------------------------------------------------*/
+
+        #scopri3 div {
+        margin-top: 5vh;
+         margin-left: 20vw;
+         width: 40vh;
+         height: 80vh;
+         background-size:40vh 80vh;
+        }
+
+
+
+        #scopri3 ul {
+          margin-left: 5vw;
+          padding:0px;
+        }
+
+        #scopri3 h2  {
+          line-height: 5vh;
+          height: 5vh;
+          font-family: "acumin-pro";
+          font-size: 22px;
+          transition: font-size 0.5s ease;
+        }
+
+        #scopri3 h2:hover {font-size: 25px}
+
+        #scopri3 input:checked + label>h2 {font-size: 30px}
+        /*-----------------------------------------------------------*/
+
+        #scopri4{
+          align-items: flex-start;
+          justify-content: center;
+          align-items: center;
+        }
+
+        #scopri4 div {
+         width: 60vw;
+         height: 40vw;
+         margin-right: 0vw;
+         margin-left: 0;
+         background-size: 60vw;
+
+        }
+
+        #scopri4 ul {
+          width: 25vw;
+          padding:0px;
+          margin-left: 0;
+        }
+
+
+
+        #scopri4 h2  {
+          line-height: 5vh;
+          height: 5vh;
+          font-family: "acumin-pro";
+          margin-left: 0;
+          font-size: 20px;
+          transition: font-size 0.5s ease;
+
+        }
+
+        #scopri4 h2:hover {font-size: 25px}
+        #scopri4 input:checked + label>h2 {font-size: 30px}
+
+
+
+
+
+
+        /*-----------------------------------------------------------*/
+        #scopri5 {background-position:bottom 0 right -90vw;background-size: 150vw;}
+
+
+        #scopri5 button {margin-top:2vh; display: inline;}
+
+
+        /*sezione test ------------------------------------------------------------------ */
+        #sfondoTest1 {background-size: 120vw; background-repeat: no-repeat; background-position: center bottom;}
+        #test1 h2 {font-size: 40px; margin-bottom: 5vw; margin-left: 5vw; margin-right: 5vw;}
+        #test1 button{margin-top: 2vh; margin-bottom: 0vh; }
+        #contatore div {width: 2vw; height: 2vw; margin: 3px; margin-top: 8vh; }
+
+  }
 
   /* Viewport: Desktop Full HD ( 1920 x 1080 px ) */
   @media only screen and (device-width: 1920px) and (device-height: 1080px) {}

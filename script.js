@@ -25,8 +25,9 @@ document.getElementsByClassName("slide")[slide-1].scrollIntoView({
 
 
 //scopri3 mockup----------------------------------------------------------------------------------------------
+function mockup1(numero) {document.getElementById("mockup1").style.backgroundImage= "url(assets/mockupCell" + numero + ".png)";}
 
-
+function mockup2(numero) {document.getElementById("mockup2").style.backgroundImage= "url(assets/mockupPc" + numero + ".png)";}
 
 
 // contatore avanzamento domande----------------------------------------------------------------------------------------
@@ -47,24 +48,27 @@ creaContatore();
 // funzionamento del test --------------------------------------------------------------------
 
 
-function avanzamentoDomande(){
-  if (domandeVar==0) {setTimeout(function(){document.getElementById("test1").style.opacity="100"} , 5500)}
+function avanzamentoDomande(pippo){
+  if (domandeVar==0) {setTimeout(function(){document.getElementById("test1").style.opacity="100"} , 5500); domandeVar++}
   if (domandeVar<25) {
 document.getElementById("domanda").innerHTML=testi.domanda[domandeVar];
 document.getElementById("opzione1").innerHTML=testi.opzione_a[domandeVar];
 document.getElementById("opzione2").innerHTML=testi.opzione_b[domandeVar];
 document.getElementsByClassName("contatoreElement")[domandeVar].style.backgroundColor="white";
+domandeVar++;
 
 } else if (domandeVar==25) {
   document.getElementById("domanda").innerHTML="Scopri i risultati del test!";
-  document.getElementById("opzione1").innerHTML="<i style='opacity:50%; padding-right:7vw'>inserisci la tua mail</i>";
+  document.getElementById("opzione1").innerHTML="<input placeholder='Inserisci qui la tua mail' style='  background-color: inherit; border-width: 0; color:white'> </input>";
   document.getElementById("opzione2").innerHTML="Invia";
-} else if (domandeVar==26) {
+  domandeVar++;
+} else if (domandeVar==26 && pippo==2) {
+
   document.getElementById("domanda").innerHTML="Controlla la tua casella mail per vedere i risultati";
 document.getElementById("opzione1").innerHTML="<a href='index.html'>Torna alla Home</a>";
 document.getElementById("opzione2").style.display="none";
 }
-domandeVar++}
+}
 
 avanzamentoDomande();
 
