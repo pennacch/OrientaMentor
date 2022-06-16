@@ -47,28 +47,32 @@ h2 {
 
 h3 {
   font-family: "acumin-pro";
+   font-weight: normal;
+   line-height: 97%;
   font-size: 36px;
   color: white;
 }
 
 h4 {
   font-family: "acumin-pro";
+  font-weight: normal;
   font-size: 24px;
   color: white;
 }
 
 button {
   font-family: "acumin-pro";
-  font-size: 36px;
+  font-weight: normal;
+  font-size: 32px;
   color: white;
   border-color: white;
   border-radius: 60px;
   text-decoration: none;
   background-color: transparent;
   border-style: solid;
-  padding: 0.5em;
-  padding-left: 1.5em;
-  padding-right: 1.5em;
+  padding: 0.2em;
+  padding-left: 1.7em;
+  padding-right: 1.7em;
   margin-top: 5vh;
   transition:  all .2s ease-in-out;
 }
@@ -169,9 +173,10 @@ a {
   margin-left: 0
 }
 
-#home2 h1 {
-  padding-top: 15vh;
+#home2 h2 {
+  padding-top: 20vh;
 }
+#home2 h3 {margin-top: 3vh;}
 
 /* SCHERMATA CON LE SLIDE ____________________________________ */
 #home3 {
@@ -244,7 +249,7 @@ a {
 #home4 {display: flex; align-items: center; justify-content: center;s}
 
   #video{background-color: black;
-   width:80vw; height: 45vw;}
+   width:70vw; height: 38vw;}
 
 /* SCHERMATA del SCARICA ____________________________________ */
 #home5 {
@@ -420,6 +425,7 @@ footer {
 #test1{opacity: 0; transition: opacity 2s}
 
 #test1 h2 {
+  font-size: 63px;
   margin-left: 20vw;
   margin-right: 20vw;
   padding-top: 40vh;
@@ -433,7 +439,7 @@ footer {
 
 #test1 button {
   margin: 2vw;
-  margin-top: 7vh;
+  margin-top: 3vh;
   margin-bottom: 10vh;
 }
 #contatore div {
@@ -464,7 +470,7 @@ footer{display: none;}
 .topBar>img {height: 4vh;}
 .topBar img:first-child  {height: 8vh;}
 
-#home2 h1 {padding-top: 25vh;}
+#home2 h2 {padding-top: 25vh;}
 #home2 h3 {margin-top: 2vh; max-width: 80vw;}
 #home2 {background-size: 150vw;}
 #home2 button {margin-top:2vh;}
@@ -735,7 +741,7 @@ footer{display: none;}
     .topBar img:first-child  {height: 7vh;}
 
     #home2 * {max-width: 80vw;}
-    #home2 h1 {padding-top: 15vh;}
+    #home2 h2 {padding-top: 15vh;}
     #home2 h3 {margin-top: 0vh;}
     #home2 {background-size: 150vw;}
     #home2 button {margin-top:3vh;}
@@ -873,7 +879,7 @@ footer{display: none;}
         .topBar img:first-child  {height: 7vh;}
 
         #home2 * {max-width: 60vw;}
-        #home2 h1 {padding-top: 15vh;}
+        #home2 h2 {padding-top: 15vh;}
         #home2 h3 {margin-top: 0vh;}
         #home2 {background-size: 100vw;}
         #home2 button {margin-top:3vh;}
