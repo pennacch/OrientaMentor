@@ -9,25 +9,35 @@ let domandeVar = 0;
 let puntini = [];
 
 
+console.log("Nella sezione test usa 'skip()' per abbreviare il test");
+console.log("OrientaMentor - Sito vetrina - 16 giugno 2022");
+
+
 //animazioneHome1
-setTimeout(function(){document.getElementById("home1").style.height="0vw"} ,3500)
+setTimeout(function() {
+  document.getElementById("home1").style.height = "0vw"
+}, 3500)
 
 
 //slide pagina home3-------------------------------------------------------------------------
 
 function scorrimentoSlide(slide) {
-document.getElementsByClassName("slide")[slide-1].scrollIntoView({
-  behavior: "smooth",
-  block: "center",
-  inline: "center"
-});
+  document.getElementsByClassName("slide")[slide - 1].scrollIntoView({
+    behavior: "smooth",
+    block: "center",
+    inline: "center"
+  });
 }
 
 
 //scopri3 mockup----------------------------------------------------------------------------------------------
-function mockup1(numero) {document.getElementById("mockup1").style.backgroundImage= "url(assets/mockupCell" + numero + ".png)";}
+function mockup1(numero) {
+  document.getElementById("mockup1").style.backgroundImage = "url(assets/mockupCell" + numero + ".png)";
+}
 
-function mockup2(numero) {document.getElementById("mockup2").style.backgroundImage= "url(assets/mockupPc" + numero + ".png)";}
+function mockup2(numero) {
+  document.getElementById("mockup2").style.backgroundImage = "url(assets/mockupPc" + numero + ".png)";
+}
 
 
 // contatore avanzamento domande----------------------------------------------------------------------------------------
@@ -47,32 +57,72 @@ creaContatore();
 
 // funzionamento del test --------------------------------------------------------------------
 
+function aggiornaDomande() {
+  document.getElementById("domanda").innerHTML = testi.domanda[domandeVar];
+  document.getElementById("opzione1").innerHTML = testi.opzione_a[domandeVar];
+  document.getElementById("opzione2").innerHTML = testi.opzione_b[domandeVar];
 
-function avanzamentoDomande(pippo){
-  if (domandeVar==0) {setTimeout(function(){document.getElementById("test1").style.opacity="100"} , 5500); domandeVar++}
-  if (domandeVar<25) {
-document.getElementById("domanda").innerHTML=testi.domanda[domandeVar];
-document.getElementById("opzione1").innerHTML=testi.opzione_a[domandeVar];
-document.getElementById("opzione2").innerHTML=testi.opzione_b[domandeVar];
-document.getElementsByClassName("contatoreElement")[domandeVar].style.backgroundColor="white";
-domandeVar++;
 
-} else if (domandeVar==25) {
-  document.getElementById("domanda").innerHTML="Scopri i risultati del test!";
-  document.getElementById("opzione1").innerHTML="<input placeholder='Inserisci qui la tua mail' style='  background-color: inherit; border-width: 0; color:white'> </input>";
-  document.getElementById("opzione2").innerHTML="Invia";
+  if (domandeVar > 0) {
+
+    document.getElementsByClassName("contatoreElement")[domandeVar - 1].style.backgroundColor = "white";
+  }
+
   domandeVar++;
-} else if (domandeVar==26 && pippo==2) {
 
-  document.getElementById("domanda").innerHTML="Controlla la tua casella mail per vedere i risultati";
-document.getElementById("opzione1").innerHTML="<a href='index.html'>Torna alla Home</a>";
-document.getElementById("opzione2").style.display="none";
+
 }
+
+function avanzamentoDomande(pippo) {
+  if (domandeVar == 0) {
+    setTimeout(function() {
+      document.getElementById("test1").style.opacity = "100"
+    }, 5500);
+  }
+
+  if (domandeVar == 7 || domandeVar == 12 || domandeVar == 16 || domandeVar == 21) {
+    document.getElementById("test1").style.opacity = "0";
+    setTimeout(function() {
+      aggiornaDomande();
+      document.getElementById("test1").style.opacity = "100"
+    }, 5500);
+      if (window.innerWidth < 380) {
+    document.getElementById("sfondoTest1").style.background = "url(assets/AnimazioneTest" + domandeVar + "SE.gif)";}
+    else if (window.innerWidth < 600) {
+  document.getElementById("sfondoTest1").style.background = "url(assets/AnimazioneTest" + domandeVar + "12.gif)";}
+  else if (window.innerWidth < 800) {
+document.getElementById("sfondoTest1").style.background = "url(assets/AnimazioneTest" + domandeVar + "IPADVER.gif)";}
+else if (window.innerWidth < 1080) {
+document.getElementById("sfondoTest1").style.background = "url(assets/AnimazioneTest" + domandeVar + "IPADOR.gif)";}
+else if (window.innerWidth < 3000) {
+document.getElementById("sfondoTest1").style.background = "url(assets/AnimazioneTest" + domandeVar + "FHD.gif)"; console.log("aaaaaa")}
+  }
+  else if (domandeVar < 25) {
+  aggiornaDomande();
+  }
+
+
+
+  if (domandeVar == 25) {
+    document.getElementById("domanda").innerHTML = "Scopri i risultati del test!";
+    document.getElementById("opzione1").innerHTML = "<input placeholder='mail' style='  background-color: inherit; border-width: 0; color:white'> </input>";
+    document.getElementById("opzione1").style.width= "30vw";
+    document.getElementById("opzione2").innerHTML = "Invia";
+    domandeVar++;
+  } else if (domandeVar == 26 && pippo == 2) {
+
+    document.getElementById("domanda").innerHTML = "Controlla la tua casella mail per vedere i risultati";
+    document.getElementById("opzione1").innerHTML = "<a href='index.html'>Torna alla Home</a>";
+    document.getElementById("opzione2").style.display = "none";
+  }
 }
 
 avanzamentoDomande();
 
 
+function skip() {
+  domandeVar=24;
+}
 
 
 // apertura e chiusura menu ------------------------------------------------------------------
