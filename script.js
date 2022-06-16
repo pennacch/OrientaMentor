@@ -1,7 +1,7 @@
 const testi = {
-  domanda: ["Ti consideri una persona", "Preferisci", "Cosa porta lontano?", "Davanti ad un problema preferisci", "In una situazione nuova", "Quando parli", "La routine è", "Lavori meglio", "Nel lavoro cerchi", "Preferiresti", "Dai più importanza", "Responsabilità per me è", "domanda12", "domanda13", "domanda14", "domanda15", "domanda16", "domanda17", "domanda18", "domanda19", "domanda20", "Riguardo alla ricerca", "Per i miei interessi la storia è", "C’è un malato", "Il contatto con la natura è"],
-  opzione_a: ["Introversa", "Coordinare", "Talento", "Risolverlo in autonomia", "Sondi il terreno", "Dici le cose me stanno", "Da evitare", "In un grande ufficio", "Stabilità", "Ricchezza", "Alle relazioni", "Da evitare", "opzione_a_12", "opzione_a_13", "opzione_a_14", "opzione_a_15", "opzione_a_16", "opzione_a_17", "opzione_a_18", "opzione_a_19", "opzione_a_20", "Contemplabile", "Necessaria", "Chiamo un medico", "Fondamentale"],
-  opzione_b: ["Estroversa", "Mettere le mani in pasta", "Costanza", "Chiedere aiuto", "Ti butti a capofitto", "Fai il diplomatico", "Confortante", "All’aria aperta", "Flessibilità", "Realizzazione", "Agli obiettivi", "Ben accetta", "opzione_b_12", "opzione_b_13", "opzione_b_14", "opzione_b_15", "opzione_b_16", "opzione_b_17", "opzione_b_18", "opzione_b_19", "opzione_b_20", "Da escludere", "Non fondamentale", "Come posso aiutare?", "Viva il cemento "]
+  domanda: ["Ti consideri una persona", "Preferisci", "Cosa porta lontano?", "Davanti ad un problema preferisci", "In una situazione nuova", "Quando parli", "La routine è", "Lavori meglio", "Nel lavoro cerchi", "Preferiresti", "Dai più importanza", "Responsabilità per me è", "Ti riesce meglio", "Ti concentri di più su", "Di solito preferisci", "La tua personalità", "Se devi risolvere un problema complesso", "Quanto apprezzi insegnare agli altri", "Ti piace stare a contatto con i bambini", "Quanto ti interessa aiutare gli altri", "È importante avere un lavoro che possa fare la differenza", "Riguardo alla ricerca", "Per i miei interessi la storia è", "C’è un malato", "Il contatto con la natura è"],
+  opzione_a: ["Introversa", "Coordinare", "Talento", "Risolverlo in autonomia", "Sondi il terreno", "Dici le cose me stanno", "Da evitare", "In un grande ufficio", "Stabilità", "Ricchezza", "Alle relazioni", "Da evitare", "Un ragionamento logico", "Le tue prestazioni", "Improvvisare", "Rifletto sulle soluzioni", "Intrigante!", "Poco", "Poco", "Poco", "Poco", "Contemplabile", "Necessaria", "Chiamo un medico", "Fondamentale"],
+  opzione_b: ["Estroversa", "Mettere le mani in pasta", "Costanza", "Chiedere aiuto", "Ti butti a capofitto", "Fai il diplomatico", "Confortante", "All’aria aperta", "Flessibilità", "Realizzazione", "Agli obiettivi", "Ben accetta", "Un approccio creativo", "Il risultato finale", "Pianificare", "Agisco d’istinto", "Mi viene l’ansia", "Molto", "Molto", "Molto", "Molto", "Da escludere", "Non fondamentale", "Come posso aiutare?", "Viva il cemento "]
 }
 
 let domandeVar = 0;
@@ -10,13 +10,9 @@ let puntini = [];
 
 
 console.log("Nella sezione test usa 'skip()' per abbreviare il test");
-console.log("OrientaMentor - Sito vetrina - 16 giugno 2022 - Versione 2");
+console.log("OrientaMentor - Sito vetrina - 16 giugno 2022 - Versione 3");
 
 
-//animazioneHome1
-setTimeout(function() {
-  document.getElementById("home1").style.height = "0vw"
-}, 3500)
 
 
 //slide pagina home3-------------------------------------------------------------------------
@@ -39,6 +35,37 @@ function mockup2(numero) {
   document.getElementById("mockup2").style.backgroundImage = "url(assets/mockupPc" + numero + ".png)";
 }
 
+
+
+
+
+
+function skip() {
+  domandeVar=24;
+}
+
+
+// apertura e chiusura menu ------------------------------------------------------------------
+
+function openMenu() {
+  document.getElementById("menu").style.display = "flex";
+}
+
+function closeMenu() {
+  document.getElementById("menu").style.display = "none";
+}
+
+//\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+//\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+//\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+//\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+
+//animazioneHome1
+setTimeout(function() {
+  document.getElementById("home1").style.height = "0vw"
+}, 3500);
 
 // contatore avanzamento domande----------------------------------------------------------------------------------------
 function creaContatore() {
@@ -118,19 +145,3 @@ document.getElementById("sfondoTest1").style.background = "url(assets/Animazione
 }
 
 avanzamentoDomande();
-
-
-function skip() {
-  domandeVar=24;
-}
-
-
-// apertura e chiusura menu ------------------------------------------------------------------
-
-function openMenu() {
-  document.getElementById("menu").style.display = "flex";
-}
-
-function closeMenu() {
-  document.getElementById("menu").style.display = "none";
-}

@@ -34,7 +34,7 @@ body>div{
 
 h1 {
   font-family: "Baloo 2";
-  font-size: 120px;
+  font-size: 100px;
   color: white;
 }
 
@@ -49,7 +49,7 @@ h3 {
   font-family: "acumin-pro";
    font-weight: normal;
    line-height: 107%;
-  font-size: 36px;
+  font-size: 28px;
   color: white;
 }
 
@@ -166,17 +166,17 @@ a {
 
 #home2 * {
   margin-left: 10vw;
-  max-width: 60vw;
+  max-width: 45vw;
 }
 
 #home2 a {
   margin-left: 0
 }
 
-#home2 h2 {
-  padding-top: 20vh;
+#home2 h1 {
+  padding-top: 20vh; max-width: 60vw;
 }
-#home2 h3 {margin-top: 3vh;}
+#home2 h3 {margin-top: 0vh;}
 
 /* SCHERMATA CON LE SLIDE ____________________________________ */
 #home3 {
@@ -369,13 +369,13 @@ footer {
   line-height: 8vh;
   height: 8vh;
   font-family: "acumin-pro";
-  font-size: 60px;
+  font-size: 42px;
   transition: font-size 0.5s ease;
 }
 
-#scopri3 h2:hover {font-size: 70px}
+#scopri3 h2:hover {font-size: 48px}
 
-#scopri3 input:checked + label>h2 {font-size: 75px}
+#scopri3 input:checked + label>h2 {font-size: 56px}
 #scopri3 input {display: none}
 
 
@@ -400,13 +400,13 @@ footer {
   line-height: 8vh;
   height: 8vh;
   font-family: "acumin-pro";
-  font-size: 60px;
+  font-size: 42px;
   transition: font-size 0.5s ease;
 }
 
-#scopri4 h2:hover {font-size: 70px}
+#scopri4 h2:hover {font-size: 48px}
 
-#scopri4 input:checked + label>h2 {font-size: 75px}
+#scopri4 input:checked + label>h2 {font-size: 56px}
 #scopri4 input {display: none}
 
 
@@ -458,11 +458,11 @@ footer {
 /* Viewport: Iphone SE Portrait ( 375 x 667 px ) */
 @media only screen and (device-width: 375px) and (device-height: 667px) {
 
-h1{font-size: 40px; line-height: 90%}
+h1{font-size: 44px; line-height: 90%}
 h2{font-size:40px;}
 h3{font-size:18px;}
 h4{font-size:12px;}
-button{font-size:20px;}
+button{font-size:20px; padding-left:1em; padding-right: 1em}
 footer{display: none;}
 
 
@@ -741,8 +741,9 @@ footer{display: none;}
     .topBar img:first-child  {height: 7vh;}
 
     #home2 * {max-width: 80vw;}
+    #home2 h1{max-width: 80vw;}
     #home2 h2 {padding-top: 15vh;}
-    #home2 h3 {margin-top: 0vh;}
+    #home2 h3 {margin-top: 0vh; max-width: 45vw;}
     #home2 {background-size: 150vw;}
     #home2 button {margin-top:3vh;}
 
