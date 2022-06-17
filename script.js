@@ -10,7 +10,7 @@ let puntini = [];
 
 
 console.log("Nella sezione test usa 'skip()' per abbreviare il test");
-console.log("OrientaMentor - Sito vetrina - 16 giugno 2022 - Versione 3");
+console.log("OrientaMentor - Sito vetrina - Versione 4");
 
 
 
